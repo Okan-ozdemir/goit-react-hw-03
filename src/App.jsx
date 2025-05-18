@@ -1,8 +1,7 @@
 import { useState } from "react";
-// Açıkça dosya uzantısını belirtin
-import ContactForm from "./components/ContactForm/ContactForm.jsx"; // veya .js
-import ContactList from "./components/ContactList/ContactList.jsx";
-import SearchBox from "./components/SearchBox/SearchBox.jsx";
+import ContactForm from "./components/ContactForm/ContactForm";
+import ContactList from "./components/ContactList/ContactList";
+import SearchBox from "./components/SearchBox/SearchBox";
 import "./App.css";
 
 function App() {
