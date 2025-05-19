@@ -1,4 +1,4 @@
-import "./SearchBox.css";
+import "./SearchBox.module.css";
 
 const SearchBox = ({ value, onChange }) => {
   return (

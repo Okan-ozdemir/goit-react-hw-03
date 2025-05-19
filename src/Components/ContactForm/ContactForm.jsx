@@ -1,7 +1,7 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { nanoid } from "nanoid";
-import "./ContactForm.css";
+import "./ContactForm.module.css";
 
 const ContactForm = ({ onSubmit }) => {
   const formik = useFormik({
