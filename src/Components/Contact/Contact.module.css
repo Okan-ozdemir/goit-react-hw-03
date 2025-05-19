@@ -1,15 +1,36 @@
-/* Önceki stillere eklemeler */
-/* .error {
-    border-color: #e74c3c !important;
+.contactItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
 }
 
-.error-message {
-    color: #e74c3c;
-    font-size: 0.8rem;
-    margin-top: 0.25rem;
+.contactInfo {
+    display: flex;
+    flex-direction: column;
 }
 
-.submit-btn:disabled {
-    background-color: #95a5a6;
-    cursor: not-allowed;
-} */
+.contactName {
+    font-weight: bold;
+    color: #333;
+}
+
+.contactNumber {
+    color: #666;
+}
+
+.deleteBtn {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.deleteBtn:hover {
+    background-color: darkred;
+}

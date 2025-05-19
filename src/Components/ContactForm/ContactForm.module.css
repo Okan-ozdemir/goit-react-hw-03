@@ -1,73 +1,67 @@
-.contact-form {
-    background: #f8f9fa;
-    padding: 25px;
+/* Genel Form Konteyneri */
+.contactForm {
+    background-color: #f9f9f9;
+    padding: 20px;
     border-radius: 8px;
-    margin-bottom: 30px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: auto;
 }
 
-.form-title {
-    color: #2c3e50;
-    margin-top: 0;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-    font-weight: 600;
+/* Başlık Stili */
+.formTitle {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: #333;
 }
 
-.form-group {
-    margin-bottom: 20px;
+/* Form Grupları */
+.formGroup {
+    margin-bottom: 15px;
 }
 
-.form-label {
+/* Etiket Stili */
+.formLabel {
     display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #2c3e50;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
-.form-input {
+/* Giriş Alanları */
+.formInput {
     width: 100%;
-    padding: 10px 12px;
-    border: 1px solid #ddd;
+    padding: 8px;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 1rem;
-    transition: border-color 0.3s;
+    font-size: 16px;
 }
 
-.form-input:focus {
-    outline: none;
-    border-color: #3498db;
-    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
-}
-
+/* Hata Mesajı */
 .error {
-    border-color: #e74c3c;
+    border-color: red;
 }
 
-.error-message {
-    color: #e74c3c;
-    font-size: 0.85rem;
-    margin-top: 5px;
+.errorMessage {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
 }
 
-.submit-btn {
-    background: #3498db;
+/* Gönder Butonu */
+.submitBtn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
     color: white;
     border: none;
-    padding: 12px 20px;
-    border-radius: 4px;
-    font-size: 1rem;
-    font-weight: 600;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
-    width: 100%;
-    transition: background 0.3s;
 }
 
-.submit-btn:hover {
-    background: #2980b9;
-}
-
-.submit-btn:disabled {
-    background: #bdc3c7;
+.submitBtn:disabled {
+    background-color: #ccc;
     cursor: not-allowed;
 }

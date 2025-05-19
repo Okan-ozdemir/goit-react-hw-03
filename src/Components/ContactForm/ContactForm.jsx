@@ -1,7 +1,7 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { nanoid } from "nanoid";
-import "./ContactForm.module.css";
+import styles from "./ContactForm.module.css"; // 🔹 Modül olarak içe aktarıldı!
 
 const ContactForm = ({ onSubmit }) => {
   const formik = useFormik({
@@ -29,50 +29,54 @@ const ContactForm = ({ onSubmit }) => {
   });
 
   return (
-    <form onSubmit={formik.handleSubmit} className="contact-form">
-      <h2 className="form-title">Add New Contact</h2>
+    <form onSubmit={formik.handleSubmit} className={styles.contactForm}>
+      <h2 className={styles.formTitle}>Add New Contact</h2>
 
-      <div className="form-group">
-        <label htmlFor="name" className="form-label">
+      <div className={styles.formGroup}>
+        <label htmlFor="name" className={styles.formLabel}>
           Name
         </label>
         <input
           id="name"
           type="text"
           name="name"
-          className={`form-input ${
-            formik.touched.name && formik.errors.name ? "error" : ""
+          className={`${styles.formInput} ${
+            formik.touched.name && formik.errors.name ? styles.error : ""
           }`}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.name}
         />
         {formik.touched.name && formik.errors.name ? (
-          <div className="error-message">{formik.errors.name}</div>
+          <div className={styles.errorMessage}>{formik.errors.name}</div>
         ) : null}
       </div>
 
-      <div className="form-group">
-        <label htmlFor="number" className="form-label">
+      <div className={styles.formGroup}>
+        <label htmlFor="number" className={styles.formLabel}>
           Number
         </label>
         <input
           id="number"
           type="tel"
           name="number"
-          className={`form-input ${
-            formik.touched.number && formik.errors.number ? "error" : ""
+          className={`${styles.formInput} ${
+            formik.touched.number && formik.errors.number ? styles.error : ""
           }`}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           value={formik.values.number}
         />
         {formik.touched.number && formik.errors.number ? (
-          <div className="error-message">{formik.errors.number}</div>
+          <div className={styles.errorMessage}>{formik.errors.number}</div>
         ) : null}
       </div>
 
-      <button type="submit" className="submit-btn" disabled={!formik.isValid}>
+      <button
+        type="submit"
+        className={styles.submitBtn}
+        disabled={!formik.isValid}
+      >
         Add contact
       </button>
     </form>
